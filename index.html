@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarDone</title>
+<link href="css/style.css" rel="stylesheet">
+<link href="css/flex.css" rel="stylesheet">
+<link href="css/effects.css" rel="stylesheet">
+<link href="css/product.css" rel="stylesheet">
+<link href="css/nav.css" rel="stylesheet">
+<link href="css/modal.css" rel="stylesheet">
+<link href="css/forms.css" rel="stylesheet">
+<link href="css/animation.css" rel="stylesheet">
+<link href="css/sidebar.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!--navigation-->
+
+    <div class="over"></div>
+
+    <div class="container">
+        <header class="bg-white">
+            <nav class="nav">
+                <div class="nav-center">
+                    <div class="nav-header">
+                        <span class="navbar-brand">CarDone Store</span>
+                    </div>
+                        <input id="hamburger" type="checkbox" class="trigger">
+                        <div class="navbar-links">
+                            <ul class="navbar-nav brackets">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                            <ul class="navbar-tool ">
+                                <li><a class="sidebar-toggle" href="#"><i class="fas fa-cart-plus"></i><small class="count-items-in-cart text-gray"></small></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i><small class=" count-items-in-cart text-gray like-me"></small></a></li>
+                                <li><a href="#login"><i class="fas fa-user-astronaut"></i></a></li>
+                            </ul>
+                            <label for="hamburger">
+                                <i class="nav-toggle fas fa-bars"></i>
+                            </label>
+                </div>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <button class="close-btn"><i class="fas fa-times"></i></button>
+                <h5 class="logo">Your Shopping Cart</h5>
+            </div>
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="picture product-img">
+                        <img src="images/Exterior1.jpg" alt="" class="img-fluid w-100">
+                    </div>
+                    <div class="product-name">Product Name</div>
+                    <div class="remove-btn text-right">
+                        <a href="#" class="reset-anchor m-auto"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                    <div class="quantity">
+                        <div class="border d-flex justify-content-around mx-auto">
+                            <i class="fas fa-caret-left"></i>
+                            <span class="border-1 p-1 amount">1</span>
+                            <i class="fas fa-caret-right"></i>
+                        </div>
+                    </div>
+                    <div class="price">
+                        $ <spa class="product-price">123</spa>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    <!-- slider -->
+    
+        <article class=" container slider">
+            <div class="slides">
+                <div class="overflow">
+                    <div class="items">
+                        <article class="slide"><img src="images/footer.jpg">
+                            <div class="row px-4 px-lg-5">
+                                <div class="slide2 col-lg-6">
+                                    <h1 class="mb-3 slider-text">20% Off On New Goods</h1>
+                                    <p class="slider-text small">We give 20% discount on all new products in our store</p>
+                                    <a href="#" class="btn btn-browse"><span>More details</span></a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="slide"><img src="images/footer3.jpg"></article>
+                        <article class="slide"><img src="images/footer4.jpg"></article>
+                        <article class="slide"><img src="images/footer5.jpg"></article>
+                        <article class="slide"><img src="images/footer6.jpg"></article>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    <!-- Categories -->
+
+        <section>
+            <header>
+            <h2>Categories</h2>
+            </header>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#" class="category-item">
+                    <img src="images/Interior-big.jpg" class="img-fluid">
+                    <strong class="category-item-title">Interior</strong></a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="category-item">
+                    <img src="images/Exterior1.jpg" class="img-fluid">
+                    <strong class="category-item-title">Exterior</strong></a>
+                    <a href="#" class="category-item">
+                    <img src="images/Wheels-1.jpg" class="img-fluid">
+                    <strong class="category-item-title">Wheels</strong></a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="category-item">
+                    <img src="images/Performance-big.jpg" class="img-fluid">
+                    <strong class="category-item-title">Performance</strong></a>
+                </div>
+            </div> 
+        </section>
+    </div>
+
+    <!-- showcase -->
+
+    <div class="container">
+                    <header>
+                        <h2>Top Trending Products</h2>
+                    </header>
+                    <div class="row showcase">
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="product text-center">
+                                <div class="position-relative mb-3">
+                                    <a class="d-block"></a><img class="img-fluid w-100" src="images/Exhaust1.jpg">
+                                <div class="product-overlay">
+                                    <ul class="mb-0 list-inline">
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-outline-dark like-it"><i class="far fa-star"></i></a></li>
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-dark add-to-cart">Add To Cart</a></li>
+                                        <li class="list-inline-item mr-0"><a href="#" class="btn btn-sm btn-outline-dark"><i class="fas fa-expand"></i></a></li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <h5 class="product-name reset-anchor">Akrapovic Kit Mercedes-Benz SLS</h5>
+                                <p class="small product-price">$2199</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="product text-center">
+                                <div class="position-relative mb-3">
+                                    <a class="d-block"></a><img class="img-fluid w-100" src="images/body-kit.jpg"> 
+                                <div class="product-overlay">
+                                    <ul class="mb-0 list-inline">
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-outline-dark like-it"><i class="far fa-star"></i></a></li>
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-dark add-to-cart">Add To Cart</a></li>
+                                        <li class="list-inline-item mr-0"><a href="#" class="btn btn-sm btn-outline-dark"><i class="fas fa-expand"></i></a></li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <h5 class="product-name reset-anchor">Custom Body Kit BMW F30</h5>
+                                <p class="small product-price">$4399</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="product text-center">
+                                <div class="position-relative mb-3">
+                                    <a class="d-block"></a><img class="img-fluid w-100" src="images/wheel.jpg"> 
+                                <div class="product-overlay">
+                                    <ul class="mb-0 list-inline">
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-outline-dark like-it"><i class="far fa-star"></i></a></li>
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-dark add-to-cart">Add To Cart</a></li>
+                                        <li class="list-inline-item mr-0"><a href="#" class="btn btn-sm btn-outline-dark"><i class="fas fa-expand"></i></a></li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <h5 class="product-name reset-anchor">Steering Wheel Audi TT RS</h5>
+                                <p class="small product-price">$1799</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="product text-center">
+                                <div class="position-relative mb-3">
+                                    <a class="d-block"></a><img class="img-fluid w-100" src="images/turbo2.jpg"> 
+                                <div class="product-overlay">
+                                    <ul class="mb-0 list-inline">
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-outline-dark like-it"><i class="far fa-star"></i></a></li>
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-dark add-to-cart">Add To Cart</a></li>
+                                        <li class="list-inline-item mr-0"><a href="#" class="btn btn-sm btn-outline-dark"><i class="fas fa-expand"></i></a></li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <h5 class="product-name reset-anchor">Turbonetics NX2 Ford Mustang</h5>
+                                <p class="small product-price">$1199</p>
+                            </div>
+                        </div>
+                   
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="product text-center">
+                                <div class="position-relative mb-3">
+                                    <a class="d-block"></a><img class="img-fluid w-100" src="images/Wheels-2.jpg"> 
+                                <div class="product-overlay">
+                                    <ul class="mb-0 list-inline">
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-outline-dark like-it"><i class="far fa-star"></i></a></li>
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-dark add-to-cart">Add To Cart</a></li>
+                                        <li class="list-inline-item mr-0"><a href="#" class="btn btn-sm btn-outline-dark"><i class="fas fa-expand"></i></a></li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <h5 class="product-name reset-anchor">Rotiform ZRH Wheels</h5>
+                                <p class="small product-price">$3299</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="product text-center">
+                                <div class="position-relative mb-3">
+                                    <a class="d-block"></a><img class="img-fluid w-100" src="images/Exterior-2.jpg">
+                                <div class="product-overlay">
+                                    <ul class="mb-0 list-inline">
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-outline-dark like-it"><i class="far fa-star"></i></a></li>
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-dark add-to-cart">Add To Cart</a></li>
+                                        <li class="list-inline-item mr-0"><a href="#" class="btn btn-sm btn-outline-dark"><i class="fas fa-expand"></i></a></li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <h5 class="product-name reset-anchor">Wide Body Kit Subaru Impreza</h5>
+                                <p class="small product-price">$4899</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="product text-center">
+                                <div class="position-relative mb-3">
+                                    <a class="d-block"></a><img class="img-fluid w-100" src="images/Performance2.jpeg"> 
+                                <div class="product-overlay">
+                                    <ul class="mb-0 list-inline">
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-outline-dark like-it"><i class="far fa-star"></i></a></li>
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-dark add-to-cart">Add To Cart</a></li>
+                                        <li class="list-inline-item mr-0"><a href="#" class="btn btn-sm btn-outline-dark"><i class="fas fa-expand"></i></a></li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <h5 class="product-name reset-anchor">Odyssey Fab Supra Downpipe</h5>
+                                <p class="small product-price">$399</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-sm-6">
+                            <div class="product text-center">
+                                <div class="position-relative mb-3">
+                                    <a class="d-block"></a><img class="img-fluid w-100" src="images/interior-3.jpg"> 
+                                <div class="product-overlay">
+                                    <ul class="mb-0 list-inline">
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-outline-dark like-it"><i class="far fa-star"></i></a></li>
+                                        <li class="list-inline-item m-0 p-0"><a href="#" class="btn btn-sm btn-dark add-to-cart">Add To Cart</a></li>
+                                        <li class="list-inline-item mr-0"><a href="#" class="btn btn-sm btn-outline-dark"><i class="fas fa-expand"></i></a></li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <h5 class="product-name reset-anchor">Audi RS Alcantara DSG Shift Knob</h5>
+                                <p class="small product-price">$899</p>
+                            </div>
+                        </div>
+                    </div>
+    </div>
+
+    <!-- SERVICES-->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <div class="d-inline-block">
+                        <div class="media align-items-end">
+                            <i class="far fa-heart"></i>
+                            <div class="media-body text-left ml-3">
+                                <h6 class="text-uppercase mb-1">Free shipping</h6>
+                                <p class="text-small mb-0 text-muted">Free shipping worlwide</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <div class="d-inline-block">
+                        <div class="media align-items-end">
+                            <i class="far fa-heart"></i>
+                            <div class="media-body text-left ml-3">
+                                <h6 class="text-uppercase mb-1">24 x 7 service</h6>
+                                <p class="text-small mb-0 text-muted">Free shipping worlwide</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-inline-block">
+                        <div class="media align-items-end">
+                            <i class="far fa-heart"></i>
+                            <div class="media-body text-left ml-3">
+                                <h6 class="text-uppercase mb-1">Festival offer</h6>
+                                <p class="text-small mb-0 text-muted">Free shipping worlwide</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER-->
+    <section class="text-center border border-light p-5 my-3">
+        <h2 class="h4 mb-3">Let's be friends!</h2>
+        <div class="text-center border border-light p-5">
+            <form class="flex-form mb-5">
+                <label for="from">
+                <i class="fas fa-info-circle"></i>
+            </label>
+                <input type="email" placeholder="Enter your email address">
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
+        <p class="mt-3">Join our mailing list. We write rarely, but only the best content.</p>
+        <p class="my-3">
+            <a href="" target="_blank">See the last newsletter</a>
+        </p>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white mt-3">
+        <section id="contact">
+                <div class="container py-4">
+                    <div class="row py-5">
+                        <div class="col-md-4 mb-3">
+                            <h6 class="text-uppercase">Customer services</h6>
+                            <ul>
+                                <li><a class="footer-link" href="#">Help &amp; Contact Us</a></li>
+                                <li><a class="footer-link" href="#">Returns &amp; Refunds</a></li>
+                                <li><a class="footer-link" href="#">Online Stores</a></li>
+                                <li><a class="footer-link" href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <h6 class="text-uppercase">Company</h6>
+                            <ul>
+                                <li><a class="footer-link" href="#">What We Do</a></li>
+                                <li><a class="footer-link" href="#">Avaible Services</a></li>
+                                <li><a class="footer-link" href="#">Lastest Posts</a></li>
+                                <li><a class="footer-link" href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <h6 class="text-uppercase">Social media</h6>
+                            <ul class="footer-socials social-icon">
+                                <li><a class="footer-link" href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a class="footer-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a class="footer-link" href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a class="footer-link" href="#"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="small text-muted mb-0">&copy; 2020 All rights reserved.</p>
+            </div>
+            <div class="col-sm-6 text-right">
+                <p class="text-write reset-anchor">Template designed by <a href="#">My Temple</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="login" class="modal">
+        <div class="dialog">
+            <a href="#close" class="close">X</a>
+            <form class="text-center border p-5 m-auto" action="" method="GET">
+                <h1 class="h4 mb-4">Sign In</h1>
+                <div class="mb-4">
+                    <input type="email" class="form-control" name="email" placeholder="Enter Your Email">
+                </div>
+                <div class="mb-4">
+                    <input type="password" class="form-control" name="password" placeholder="Enter Your Password">
+                </div>
+                <div class="form-control form-checkbox mb-4 ">
+                    <label>
+                        <input type="checkbox" class="control-input">Remember Me 
+                    </label>
+                </div>
+                <p class="my-1">
+                    <a href="forgot.html">Forgot password</a>
+                </p>
+                <button type="submit" class="btn btn-dark btn-block">Login</button>
+                <p class="y-1">
+                    Not a memder? <a href="#register">Register</a>
+                </p>
+        
+            </form>
+        </div>
+    </div>
+
+    <div id="register" class="modal">
+        <div class="dialog">
+            <a href="#close" class="close">X</a>
+            <form class="text-center border p-5 m-auto" action="" method="GET">
+                <h1 class="h4 mb-4">Sign Up</h1>
+
+                <div class="row mb-4">
+                    <div class="col-6 mx-0">
+                        <input type="text" class="form-control" name="first-name" placeholder="Enter Your First Name">
+                    </div>
+                    <div class="col-6 mx-0">
+                        <input type="text" class="form-control" name="last-name" placeholder="Enter Your Last Name">
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <input type="email" class="form-control" name="email" placeholder="Enter Your Email">
+                </div>
+
+                <div class="row mb-4">
+                    <input type="password" class="form-control" name="password" placeholder="Enter Your Password">
+                    <input type="password" class="form-control" name="password" placeholder="Confirm Your Password">
+                </div>
+                
+                <button type="submit" class="btn btn-dark btn-block">Register</button>
+                <p class="y-1">
+                    Already a memder? <a href="#login">Sign In</a>
+                </p>
+        
+            </form>
+        </div>
+    </div>
+   
+    <!-- <script src="js/app.js">
+    </script> -->
+
+    <!-- <script src="js/data.js">
+    </script> -->
+
+    <script src="js/app2.js">
+    </script>
+
+    
+
+<template id="cartItem">
+    <div class="cart-item">
+        <div class="picture product-img">
+            <img src="images/Exterior1.jpg" alt="" class="img-fluid w-100">
+        </div>
+        <div class="product-name">Product Name</div>
+        <div class="remove-btn text-right">
+            <a href="#" class="reset-anchor m-auto"><i class="fas fa-trash-alt"></i></a>
+        </div>
+        <div class="quantity">
+            <div class="border d-flex justify-content-around mx-auto">
+                <i class="fas fa-caret-left"></i>
+                <span class="border-1 p-1 amount">1</span>
+                <i class="fas fa-caret-right"></i>
+            </div>
+        </div>
+        <div class="prices">
+            <span class="price">$ <spa class="product-price">123</spa></span>
+            <span class="subtotal">$ <spa class="product-price">123</spa></span>
+        </div>
+    </div>
+</template>
+
+</body>
+</html>

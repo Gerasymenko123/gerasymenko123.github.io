@@ -1,0 +1,120 @@
+.btn-browse{
+    font-size: 1rem;
+    line-height: 1.4;
+    padding: 0.8em 1.2em;
+    background-color: grey;
+    color: white;
+    /* border-radius: 0.3rem; */
+    background: linear-gradient(#dcb14a, #d2723f);
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.btn-browse:hover{
+    padding: 0.8em 2em;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(to right, #dcb14a, #d2723f);
+}
+
+.footer-socials a i{
+    display: inline-block;
+    text-align: center;
+    line-height: 2em;
+    color: white;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
+.social-icon i.fa-facebook-f:hover{
+    background-color: #3b5998;
+    border-color: #3b5998;
+}
+
+.social-icon i.fa-twitter:hover{
+    background-color: #55acee;
+    border-color: #55acee;
+}
+
+.social-icon i.fa-youtube:hover{
+    background-color: red;
+    border-color: red;
+}
+
+.social-icon i.fa-instagram:hover{
+    background-color: #7b3222;
+    border-color: #7b3222;
+}
+
+/* .social-icon a.fa-youtube:hover{
+    color: #55acee;
+} */
+
+.ease li  a::after{
+    content: '';
+    width: 0%;
+    left: 50%;
+}
+
+.ease li  a::before{
+    content: '';
+    width: 0%;
+    left: 50%;
+}
+
+.ease li a:hover::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 50%;
+    left: 50%;
+    height: 3px;
+    background-color: #d2723f;
+}
+
+.ease li a:hover::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 50%;
+    left: 0%;
+    height: 3px;
+    background-color: #d2723f;
+}
+
+.brackets a::before{
+    margin-right: 10px;
+    content: '[';
+    transform: translateX(20px);
+}
+
+.brackets a::after{
+    margin-left: 10px;
+    content: ']';
+    transform: translateX(-20px);
+}
+
+.brackets a::after,
+.brackets a::before{
+    opacity: 0;
+    display: inline-block;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.brackets a:hover::after,
+.brackets a:hover::before{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.flex-form{
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarDone</title>
+<link href="css/style.css" rel="stylesheet">
+<link href="css/flex.css" rel="stylesheet">
+<link href="css/effects.css" rel="stylesheet">
+<link href="css/product.css" rel="stylesheet">
+<link href="css/nav.css" rel="stylesheet">
+<link href="css/forms.css" rel="stylesheet">
+<link href="css/modal.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--navigation-->
+    <header class="bg-white">
+        <nav class="nav">
+            <div class="nav-center">
+                <div class="nav-header">
+                    <span class="navbar-brand">CarDone Store</span>
+                </div>
+                    <input id="hamburger" type="checkbox" class="trigger">
+                    <div class="navbar-links">
+                        <ul class="navbar-nav brackets">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                        <ul class="navbar-tool ease">
+                            <li><a href="#"><i class="fas fa-cart-plus"></i><small class="text-gray">(2)</small></li>
+                            <li><a href="#"><i class="fas fa-star"></i><small class="text-gray">(2)</small></a></li>
+                            <li><a href="#login"><i class="fas fa-user-astronaut"></i></a></li>
+                        </ul>
+                    <label for="hamburger">
+                        <i class="nav-toggle fas fa-bars"></i>
+                    </label>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row mb-3 align-items-center">
+            <div class="col-lg-6 mb-2">
+                
+                <form class="text-center border p-5 m-auto" action="" method="GET">
+                    <h1 class="h4 mb-4">Contact Us</h1>
+                    <div class=" mb-4">
+                        <input type="text" class="form-control" name="username" value="" id="username" placeholder="Enter Your Name">
+                    </div>
+                    <div class=" mb-4">
+                        <input type="email" class="form-control" name="email" placeholder="Enter Your Email">
+                    </div>
+                    <div class="form-control form-radio mb-4">
+                        <input type="radio" name="gend"> Mr.
+                        <input type="radio" name="gend"> Ms.
+                    </div>
+                    <label for="">Subject:</label>
+                    <select name="Subject" class="form-select" id="">
+                        <option value="" disabled>Choose option</option>
+                        <option value="1">Feedback</option>
+                        <option value="2">Report a bug</option>
+                        <option value="3">Feature request</option>
+                    </select>
+                    <div class="form-group">
+                        <textarea name="message" class="form-control rounded-0" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="form-control form-checkbox mb-4 ">
+                        <label>
+                            <input type="checkbox" class="control-input"> Send Me a copy of this message 
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-block">Send</button>
+
+                </form>
+
+            </div>
+            <div class="col-lg-6">
+                <address class="h4">Address</address>
+                <p>Ukraine, Kiev, 03056, Mikhail Donets Street 17, office 1</p>
+                <p>+38 (044) 123-45-67</p>
+                <p>+38 (044) 123-45-67</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white mt-3">
+        <section id="contact">
+                <div class="container py-4">
+                    <div class="row py-5">
+                        <div class="col-md-4 mb-3">
+                            <h6 class="text-uppercase">Customer services</h6>
+                            <ul>
+                                <li><a class="footer-link" href="#">Help &amp; Contact Us</a></li>
+                                <li><a class="footer-link" href="#">Returns &amp; Refunds</a></li>
+                                <li><a class="footer-link" href="#">Online Stores</a></li>
+                                <li><a class="footer-link" href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <h6 class="text-uppercase">Company</h6>
+                            <ul>
+                                <li><a class="footer-link" href="#">What We Do</a></li>
+                                <li><a class="footer-link" href="#">Avaible Services</a></li>
+                                <li><a class="footer-link" href="#">Lastest Posts</a></li>
+                                <li><a class="footer-link" href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <h6 class="text-uppercase">Social media</h6>
+                            <ul class="footer-socials social-icon">
+                                <li><a class="footer-link" href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a class="footer-link" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a class="footer-link" href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a class="footer-link" href="#"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="small text-muted mb-0">&copy; 2020 All rights reserved.</p>
+            </div>
+            <div class="col-sm-6 text-right">
+                <p class="text-write reset-anchor">Template designed by <a href="#">My Temple</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="login" class="modal">
+        <div class="dialog">
+            <a href="#close" class="close">X</a>
+            <form class="text-center border p-5 m-auto" action="" method="GET">
+                <h1 class="h4 mb-4">Sign In</h1>
+                <div class="mb-4">
+                    <input type="email" class="form-control" name="email" placeholder="Enter Your Email">
+                </div>
+                <div class="mb-4">
+                    <input type="password" class="form-control" name="password" placeholder="Enter Your Password">
+                </div>
+                <div class="form-control form-checkbox mb-4 ">
+                    <label>
+                        <input type="checkbox" class="control-input">Remember Me 
+                    </label>
+                </div>
+                <p class="my-1">
+                    <a href="forgot.html">Forgot password</a>
+                </p>
+                <button type="submit" class="btn btn-dark btn-block">Login</button>
+                <p class="y-1">
+                    Not a memder? <a href="#register">Register</a>
+                </p>
+        
+            </form>
+        </div>
+    </div>
+
+    <div id="register" class="modal">
+        <div class="dialog">
+            <a href="#close" class="close">X</a>
+            <form class="text-center border p-5 m-auto" action="" method="GET">
+                <h1 class="h4 mb-4">Sign Up</h1>
+
+                <div class="row mb-4">
+                    <div class="col-md-6 mx-0">
+                        <input type="text" class="form-control" name="first-name" placeholder="Enter Your First Name">
+                    </div>
+                    <div class="col-md-6 mx-0">
+                        <input type="text" class="form-control" name="last-name" placeholder="Enter Your Last Name">
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <input type="email" class="form-control" name="email" placeholder="Enter Your Email">
+                </div>
+
+                <div class="row mb-4">
+                    <input type="password" class="form-control" name="password" placeholder="Enter Your Password">
+                    <input type="password" class="form-control" name="password" placeholder="Confirm Your Password">
+                </div>
+                
+                <button type="submit" class="btn btn-dark btn-block">Register</button>
+                <p class="y-1">
+                    Already a memder? <a href="#login">Sign In</a>
+                </p>
+        
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

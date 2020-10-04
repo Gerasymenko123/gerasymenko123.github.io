@@ -1,0 +1,38 @@
+body{
+    overflow-x: hidden;
+    color: black;
+}
+
+.float-left{
+    float: left !important;
+}
+
+.float-right{
+    float: right !important;
+}
+
+.container{
+    width: 99%;
+    margin:  0 auto;
+}
+
+.row{
+    width: 100%;
+}
+
+.col-4{
+    width: 33.3333%;
+}
+
+.product col{
+    width: 25%;
+}
+
+.cf{
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+

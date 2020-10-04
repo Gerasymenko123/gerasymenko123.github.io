@@ -1,0 +1,11 @@
+.gradient{
+    width: 30vw;
+    padding: 4rem;
+    background: linear-gradient(to top left,
+     yellowgreen 1%, 
+     rgb(100,247,1) 20%,
+     rgb(50,200,10) 25%,
+     rgb(5, 155,60) 30%,
+     rgb(15,59,2) 30%
+     );
+}

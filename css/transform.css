@@ -1,0 +1,81 @@
+.box-1{
+    width: 20vw;
+    padding: 4rem;
+    background-color: royalblue;
+}
+
+.box-2{
+    width: 20vw;
+    padding: 4rem;
+    background-color: rgb(45, 68, 138);
+}
+
+.box-3{
+    width: 20vw;
+    padding: 4rem;
+    background-color: rgb(4, 14, 46);
+}
+
+.box-4{
+    width: 20vw;
+    padding: 4rem;
+    background-color: rgb(142, 162, 221);
+}
+
+/* .box-4{
+    translate: rotate(20deg);
+}
+
+.box-1{
+    translate: rotate(-20deg);
+}
+
+.box-2{
+    translate: scaleY(2);
+}
+
+.box-3{
+    translate: scaleX(0.5);
+}
+
+.box-1{
+    translate: translateX(-24px);
+}
+
+.box-2{
+    translate: translateY(20%);
+}
+
+.box-3{
+    translate: translate(20%, -30%);
+}
+
+.box-2{
+    translate: skew(20deg, -20deg) rotate(30deg);
+} */
+
+.cube{
+    position: relative;
+}
+
+.side{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+
+.top{
+    background: rgb(89, 57, 205);
+    transform: rotate(-45deg) skew(15deg,15deg);
+}
+
+.left{
+    background: rgb(42, 69, 53);
+    transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+
+}
+
+.right{
+    background: rgb(5, 41, 21);
+    transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+}

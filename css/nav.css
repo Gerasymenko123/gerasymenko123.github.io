@@ -1,0 +1,191 @@
+nav{
+  background: white;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+.nav-center{
+  width: 90vw;
+  max-width: 1170;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.navbar-nav{
+  display: flex;
+  list-style: none;
+  position: relative;
+  transition: var(--transition);
+}
+
+.navbar-nav a{
+  display: block;
+  padding: 0.75rem 0;
+  margin: 0 1rem;
+  text-decoration: none;
+  background: white;
+  color: #d2723f;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+}
+
+.navbar-nav a:hover{
+  color: rgb(140, 129, 10);
+}
+
+.trigger{
+  display: none;
+}
+
+.navbar-brand{
+  font-size: 1.25rem;
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.navbar-tool{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+.navbar-tool li{
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar-tool li a{
+  padding: 0 0.3em;
+  color: #d2723f;
+  text-decoration: none;
+}
+
+#hamburger:checked ~ .navbar-links{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 60px;
+  height: auto;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: var(--transition);
+}
+
+#hamburger:checked ~ .navbar-links .navbar-nav{
+  height: auto;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: var(--transition);
+  flex-wrap: wrap;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nav-toggle{
+  font-size: 1.5rem;
+  color: #d2723f;
+  background: transparent;
+  border-color: transparent;
+  animation: bounce 2s ease-in-out infinite;
+  transition: var(--transition);
+
+}
+
+.nav-toggle:hover{
+  color: rgb(140, 129, 10);
+}
+
+.navbar-links{
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+@media (min-width:60em){
+  nav{
+      background: transparent;
+  }
+  .navbar-links{
+      height: auto !important;
+      
+  }
+  .nav-center{
+      width: 90vw;
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+  }
+  .navbar-tool{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+      color: #d2723f;
+      font-size: 1.1rem;
+      margin: 0 1rem;
+      font-weight: bold;
+      padding: 0;
+
+  }
+  .navbar-nav{
+      display: flex;
+      justify-content: space-between;
+  }
+  .navbar-nav a{
+      display: block;
+      background: transparent;
+      color: #d2723f;
+      font-size: 1.1rem;
+      text-transform: capitalize;
+      letter-spacing: var(--spacing);
+      transition: var(--transition);
+      margin: 0 1rem;
+      font-weight: bold;
+      padding: 0;
+
+  }
+  .nav-toggle{
+      display: none;
+  }
+}
+
+@media screen and (max-width: 59.9em){
+  .navbar-links{
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+}
