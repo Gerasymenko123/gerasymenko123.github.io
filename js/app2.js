@@ -4,6 +4,11 @@ class Storage{
     static saveProducts(products){
         localStorage.setItem('products', JSON.stringify(products));
     }
+
+    static saveStorageItem(key, item){
+        localStorage.setItem(key, JSON.stringify(item));
+    }
+
     static saveCart(cart){
         localStorage.setItem('basket', JSON.stringify(cart));
     }
@@ -17,10 +22,13 @@ class Storage{
     static getProducts(){
         return JSON.parse(localStorage.getItem('products'));
     }
+    static getCategories(){
+        return JSON.parse(localStorage.getItem('categories'));
+    }
 }
 
 class Product{
-    getProducts(products){
+    makeModel(products){
         return products.map(item =>{
             const id = item.id;
             const name = item.name;
@@ -28,6 +36,17 @@ class Product{
             const image = item.image;
             const category = item.category;
             return { id, name, price, image, category };
+        });
+    }
+}
+
+class Category{
+    makeModel(categories){
+        return categories.map(item =>{
+            const id = item.id;
+            const name = item.name;
+            const image = item.image;
+            return { id, name, image};
         });
     }
 }
@@ -42,23 +61,16 @@ class App{
 
     constructor(){
         const sidebarToggle = document.querySelector('.sidebar-toggle');
+
         const closeBtn = document.querySelector('.close-btn');
 
         sidebarToggle.addEventListener('click', () => this.openCart());
 
         closeBtn.addEventListener('click', () => this.closeCart());
 
-        if(document.querySelector('.collections')){
-            this.makeCategories(categories);
-        }
-
-        let data = new Product();
-        Storage.saveProducts(data.getProducts(products));
-
-        this.makeShowcase(Storage.getProducts());
+        
 
         this.cart = Storage.getCart();
-        // console.log(this.cart);
     }
 
     getProduct = id => products.find(product => product.id === +(id));
@@ -192,15 +204,14 @@ class App{
             if(event.target.classList.contains('fa-trash-alt')){
                 this.cart = this.filterItem(this.cart, event.target);
                 event.target.closest('.cart-item').remove();
-                
-                Storage.saveCart(this.cart);
                 this.setCartTotal(this.cart);
-                
-            } else if (event.target.classList.contains('fa-caret-right')){
+                Storage.saveCart(this.cart);
+            } 
+            else if (event.target.classList.contains('fa-caret-right')){
                 let tmp = this.findItem(this.cart, event.target);
                 tmp.amount = tmp.amount + 1;
-                event.target.previousElementSibling.innerText = tmp.amount;
                 Storage.saveCart(this.cart);
+                event.target.previousElementSibling.innerText = tmp.amount;
                 this.setCartTotal(this.cart);
                 
             } else if(event.target.classList.contains('fa-caret-left')){
@@ -214,9 +225,8 @@ class App{
                     event.target.closest('.cart-item').remove();
                     // this.cartItems.removeChild(event.target.parentElement.parentElement.parentElement);
                 }
-                
-                this.setCartTotal(this.cart);
                 Storage.saveCart(this.cart);
+                this.setCartTotal(this.cart);
             }
         })
     }
@@ -288,32 +298,20 @@ class App{
         });
     }
 
-    // categoriesList(categories){
-    //     let result = '';
-    //     categories.forEach(element => {
-    //         result += `<li class="mb-2"><a class="reset-anchor category-item" href="#" data-category="${element.name}">${element.name}</a></li>`;
-    //     });
-    //     document.querySelector('.categories-list').innerHTML = result;
-    // };
-
-    // compareValue(key, order = 'asc'){
-    //     return function innerSort(a, b){
-    //         if(!a.hasOwnProperty(key) || !b.hasOwnProperty(key)){
-    //             return 0;
-    //         }
-    //         const varA = (typeof a[key] === 'string') ? a[key].toUpperCase():a[key];
-    //         const varB = (typeof b[key] === 'string') ? b[key].toUpperCase():b[key];
-    
-    //         let copmarison = 0;
-    
-    //         if(varA > varB){
-    //             copmarison = 1;
-    //         }else if(varA < varB){
-    //             copmarison = -1;
-    //         }
-    //         return ((order === 'desc')? (copmarison * -1):copmarison);
-    //     }
-    // };
+    fetchData(dataBase, model){
+        const baseUrl = `https://my-json-server.typicode.com/Gerasymenko123/Gerasymenko/${dataBase}`;
+        fetch(baseUrl)
+        .then(response => {
+        if(response.status !== 200){
+            console.error(`Looks like there was a problem. Status code: ${response.status}`);
+            return;
+        }
+        response.json().then(dataJson=>{
+            Storage.saveStorageItem(dataBase, model.makeModel(dataJson));
+        })
+    })
+    .catch(err => console.error('Fetch Error:-S', err));
+    }
 }
 
 function compareValue(key, order = 'asc'){
@@ -343,12 +341,23 @@ function categoriesList(categories){
     document.querySelector('.categories-list').innerHTML = result;
 };
 
-
-
 (function(){
     const app = new App();
+
+    if(document.querySelector('.collections')){
+        app.fetchData("categories", new Category());
+        app.makeCategories(Storage.getCategories());
+    }
+    app.fetchData("products", new Product());
+            
+    app.makeShowcase(Storage.getProducts());
+    app.addProductToCart();
+    app.renderCart();
+    app.renderLike();
+    app.renderCategory();
+    
     if(document.querySelector('.categories-list')){
-        categoriesList(categories);
+        categoriesList(Storage.getCategories());
     }
 
     if(document.querySelector('.selectpicker')){
@@ -370,15 +379,13 @@ function categoriesList(categories){
                     app.makeShowcase(Storage.getProducts().sort(compareValue('id', 'asc')));
                     break;
             }
+            
             app.addProductToCart();
             app.renderCart();
+            app.renderCategory();
+            app.renderLike();
         });
     }
-    app.addProductToCart();
-    app.renderCart();
-    app.renderLike();
-    app.renderCategory();
-    // app.categoriesList();
-    // app.compareValue();
+    
 })();
 
